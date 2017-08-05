@@ -1,0 +1,9 @@
+[IRI]
+PORT = 14800
+UDP_RECEIVER_PORT = 14800
+NEIGHBORS = udp://iota.intert00bz.nl:14800
+IXI_DIR = /var/lib/iri/ixi
+HEADLESS = true
+DEBUG = false
+TESTNET = false
+DB_PATH = /var/lib/iri/db
