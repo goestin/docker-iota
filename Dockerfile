@@ -12,6 +12,7 @@ WORKDIR /var/lib/iri
 VOLUME ["/var/lib/iri"]
 
 EXPOSE 14800/udp
+EXPOSE 14800/tcp
 
 ADD config.ini.default /var/lib/iri/config.ini
 
