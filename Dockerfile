@@ -11,6 +11,8 @@ RUN apt-get update && \
 WORKDIR /var/lib/iri
 VOLUME ["/var/lib/iri"]
 
+EXPOSE 14800/udp
+
 ADD config.ini.default /var/lib/iri/config.ini
 
 ENTRYPOINT ["java", "-jar", "/opt/iri-1.2.4.jar"]
