@@ -4,7 +4,7 @@ WORKDIR /opt
 USER root
 RUN apt-get update && \
 	apt-get -y install wget openjdk-8-jre-headless && \
-	wget https://github.com/iotaledger/iri/releases/download/v1.3/iri-1.3.0.jar && \
+	wget https://github.com/iotaledger/iri/releases/download/v1.3.1/iri-1.3.1.jar && \
 	mkdir -p /var/lib/iri
 
 
@@ -16,5 +16,5 @@ EXPOSE 14800/tcp
 
 ADD config.ini.default /var/lib/iri/config.ini
 
-ENTRYPOINT ["java", "-jar", "/opt/iri-1.3.0.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/iri-1.3.1.jar"]
 CMD ["-c", "config.ini", "--remote-limit-api", "\"removeNeighbors, addNeighbors\"", "--remote"]
